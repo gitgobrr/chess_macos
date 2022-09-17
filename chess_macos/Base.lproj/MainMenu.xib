@@ -688,8 +688,24 @@
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="9ZU-Zu-rjl" customClass="BoardView" customModule="chess_macos" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="460" height="340"/>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="9ZU-Zu-rjl" secondAttribute="trailing" constant="10" id="PHG-Ky-QTb"/>
+                    <constraint firstItem="9ZU-Zu-rjl" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="10" id="iQi-sM-A6j"/>
+                    <constraint firstAttribute="bottom" secondItem="9ZU-Zu-rjl" secondAttribute="bottom" constant="10" id="wPL-y8-zFb"/>
+                    <constraint firstItem="9ZU-Zu-rjl" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="10" id="xEM-ru-Qf8"/>
+                </constraints>
             </view>
             <point key="canvasLocation" x="200" y="400"/>
         </window>
+        <viewController id="sWJ-PS-LS4" customClass="BoardController" customModule="chess_macos" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="9ZU-Zu-rjl" id="ZIF-8T-gDu"/>
+            </connections>
+        </viewController>
     </objects>
 </document>
