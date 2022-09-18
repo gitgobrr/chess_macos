@@ -15,6 +15,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        
+        
+        window.contentAspectRatio = NSSize(width: 1, height: 1)
+        
+        guard let screenFrame = window.screen?.frame else { return }
+        
+        window.maxFullScreenContentSize = NSSize(width: screenFrame.height, height: screenFrame.height)
+        window.contentMinSize = NSSize(width: screenFrame.width/4, height: screenFrame.width/4)
+        window.setContentSize(window.contentMinSize)
+        
+        
+        window.level = .floating
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

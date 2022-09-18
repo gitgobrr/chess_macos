@@ -702,9 +702,9 @@
             </view>
             <point key="canvasLocation" x="200" y="400"/>
         </window>
-        <viewController id="sWJ-PS-LS4" customClass="BoardController" customModule="chess_macos" customModuleProvider="target">
+        <viewController id="uCF-dr-8ER" customClass="BoardController" customModule="chess_macos" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="9ZU-Zu-rjl" id="ZIF-8T-gDu"/>
+                <outlet property="view" destination="9ZU-Zu-rjl" id="gpS-fb-1AQ"/>
             </connections>
         </viewController>
     </objects>

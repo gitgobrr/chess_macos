@@ -8,13 +8,15 @@
 import Cocoa
 
 class BoardController: NSViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        
     }
     
-    
-    
-    
+    @objc func tap() {
+        print("hey")
+    }
+
 }
