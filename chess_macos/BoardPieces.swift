@@ -13,45 +13,45 @@ enum PieceColor: String {
     case white = "w"
 }
 
-enum PieceType: String {
-    case pawn = "p"
-    case rook = "r"
-    case knight = "n"
-    case bishop = "b"
-    case queen = "q"
-    case king = "k"
+enum PieceType: Int {
+    case pawn
+    case rook
+    case knight
+    case bishop
+    case queen
+    case king
 }
 
-
-struct Piece {
-    var origin: NSPoint
+class PieceView: NSImageView {
     let color: PieceColor
     
     var type: PieceType
-    var image: NSImageView
+    var square: NSPoint
+    var isDragged = false
     
-    init(origin: NSPoint = .zero, type: PieceType, color: PieceColor) {
-        self.origin = origin
-        self.type = type
+    init(type: PieceType, color: PieceColor, square: NSPoint) {
         self.color = color
+        self.type = type
+        self.square = square
         
-        self.image = NSImageView(image: NSImage(named: type.rawValue+color.rawValue)!)
+        super.init(frame: NSRect())
+        imageScaling = .scaleAxesIndependently
+        image = NSImage(named: color.rawValue+"-\(type.rawValue)")!
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
-    mutating func originByPieace(board: BoardView) {
-        if color == .white {
-            if type == .pawn {
-                image.frame.origin.y = .zero + image.bounds.height
-            } else {
-                image.frame.origin.y = .zero
-            }
-        } else if color == .black {
-            if type == .pawn {
-                image.frame.origin.y = board.bounds.maxY - image.bounds.height * 2
-            } else {
-                image.frame.origin.y = board.bounds.maxY - image.bounds.height
-            }
-        }
+    func setOrigin(square point: NSPoint) -> NSPoint {
+        return point.applying(.init(scaleX: bounds.width, y: bounds.height))
+    }
+    
+    func getSquare() -> NSPoint {
+        var square = NSPoint()
+        square.x = (frame.origin.x/frame.size.width).rounded()
+        square.y = (frame.origin.y/frame.size.height).rounded()
+        
+        return square
     }
 }

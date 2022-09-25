@@ -12,7 +12,6 @@
 		A5E4D8CE28D5FF8900F2395F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E4D8CC28D5FF8900F2395F /* MainMenu.xib */; };
 		A5E4D8D828D6095100F2395F /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E4D8D728D6095100F2395F /* BoardView.swift */; };
 		A5E4D8E328D6448F00F2395F /* BoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E4D8E128D6448F00F2395F /* BoardController.swift */; };
-		A5E4D8E428D6448F00F2395F /* BoardController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E4D8E228D6448F00F2395F /* BoardController.xib */; };
 		A5E4D8E628D652C800F2395F /* BoardPieces.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E4D8E528D652C800F2395F /* BoardPieces.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +23,6 @@
 		A5E4D8CF28D5FF8900F2395F /* chess_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = chess_macos.entitlements; sourceTree = "<group>"; };
 		A5E4D8D728D6095100F2395F /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		A5E4D8E128D6448F00F2395F /* BoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardController.swift; sourceTree = "<group>"; };
-		A5E4D8E228D6448F00F2395F /* BoardController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardController.xib; sourceTree = "<group>"; };
 		A5E4D8E528D652C800F2395F /* BoardPieces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardPieces.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +60,6 @@
 				A5E4D8CA28D5FF8900F2395F /* Assets.xcassets */,
 				A5E4D8CC28D5FF8900F2395F /* MainMenu.xib */,
 				A5E4D8E128D6448F00F2395F /* BoardController.swift */,
-				A5E4D8E228D6448F00F2395F /* BoardController.xib */,
 				A5E4D8D728D6095100F2395F /* BoardView.swift */,
 				A5E4D8E528D652C800F2395F /* BoardPieces.swift */,
 				A5E4D8CF28D5FF8900F2395F /* chess_macos.entitlements */,
@@ -129,7 +126,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5E4D8CB28D5FF8900F2395F /* Assets.xcassets in Resources */,
-				A5E4D8E428D6448F00F2395F /* BoardController.xib in Resources */,
 				A5E4D8CE28D5FF8900F2395F /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

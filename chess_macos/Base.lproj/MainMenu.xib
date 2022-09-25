@@ -704,6 +704,7 @@
         </window>
         <viewController id="uCF-dr-8ER" customClass="BoardController" customModule="chess_macos" customModuleProvider="target">
             <connections>
+                <outlet property="board" destination="9ZU-Zu-rjl" id="teY-2b-Mgf"/>
                 <outlet property="view" destination="9ZU-Zu-rjl" id="gpS-fb-1AQ"/>
             </connections>
         </viewController>
