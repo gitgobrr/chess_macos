@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A523BB3228E1C43100D83D2B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523BB3128E1C43100D83D2B /* Extensions.swift */; };
+		A523BB3628E2191400D83D2B /* PieceGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523BB3528E2191400D83D2B /* PieceGestureRecognizer.swift */; };
 		A5E4D8C928D5FF8800F2395F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E4D8C828D5FF8800F2395F /* AppDelegate.swift */; };
 		A5E4D8CB28D5FF8900F2395F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5E4D8CA28D5FF8900F2395F /* Assets.xcassets */; };
 		A5E4D8CE28D5FF8900F2395F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E4D8CC28D5FF8900F2395F /* MainMenu.xib */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A523BB3128E1C43100D83D2B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A523BB3528E2191400D83D2B /* PieceGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceGestureRecognizer.swift; sourceTree = "<group>"; };
 		A5E4D8C528D5FF8800F2395F /* chess_macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chess_macos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E4D8C828D5FF8800F2395F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5E4D8CA28D5FF8900F2395F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,11 +61,13 @@
 			isa = PBXGroup;
 			children = (
 				A5E4D8C828D5FF8800F2395F /* AppDelegate.swift */,
-				A5E4D8CA28D5FF8900F2395F /* Assets.xcassets */,
 				A5E4D8CC28D5FF8900F2395F /* MainMenu.xib */,
 				A5E4D8E128D6448F00F2395F /* BoardController.swift */,
 				A5E4D8D728D6095100F2395F /* BoardView.swift */,
 				A5E4D8E528D652C800F2395F /* BoardPieces.swift */,
+				A523BB3128E1C43100D83D2B /* Extensions.swift */,
+				A523BB3528E2191400D83D2B /* PieceGestureRecognizer.swift */,
+				A5E4D8CA28D5FF8900F2395F /* Assets.xcassets */,
 				A5E4D8CF28D5FF8900F2395F /* chess_macos.entitlements */,
 			);
 			path = chess_macos;
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A523BB3628E2191400D83D2B /* PieceGestureRecognizer.swift in Sources */,
+				A523BB3228E1C43100D83D2B /* Extensions.swift in Sources */,
 				A5E4D8C928D5FF8800F2395F /* AppDelegate.swift in Sources */,
 				A5E4D8E628D652C800F2395F /* BoardPieces.swift in Sources */,
 				A5E4D8D828D6095100F2395F /* BoardView.swift in Sources */,

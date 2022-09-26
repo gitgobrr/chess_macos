@@ -5,7 +5,6 @@
 //  Created by sergey on 17.09.2022.
 //
 
-import Foundation
 import AppKit
 
 enum PieceColor: String {
@@ -27,7 +26,6 @@ class PieceView: NSImageView {
     
     var type: PieceType
     var square: NSPoint
-    var isDragged = false
     
     init(type: PieceType, color: PieceColor, square: NSPoint) {
         self.color = color
@@ -54,4 +52,5 @@ class PieceView: NSImageView {
         
         return square
     }
+    
 }
