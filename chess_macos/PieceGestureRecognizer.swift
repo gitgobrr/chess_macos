@@ -31,7 +31,8 @@ class PieceGestureRecognizer: NSGestureRecognizer {
     }
     
     override func mouseUp(with event: NSEvent) {
-        piece.frame.origin = piece.getSquare().applying(.init(scaleX: piece.frame.width, y: piece.frame.height))
+        piece.frame.origin = piece.getSquare().applying(.init(multiply: piece.frame.width))
+        piece.square = piece.getSquare()
     }
     
 }

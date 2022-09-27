@@ -42,7 +42,7 @@ class PieceView: NSImageView {
     }
     
     func setOrigin(square point: NSPoint) -> NSPoint {
-        return point.applying(.init(scaleX: bounds.width, y: bounds.height))
+        return point.applying(.init(multiply: bounds.width))
     }
     
     func getSquare() -> NSPoint {

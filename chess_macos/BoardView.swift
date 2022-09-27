@@ -39,9 +39,28 @@ class BoardView: NSView {
     
     func drawPieces() {
         pieces.forEach { pieceView in
-            pieceView.frame.size = bounds.size.applying(.init(scaleX: 1/8, y: 1/8))
+            pieceView.frame.size = bounds.size.applying(.shrink8)
             pieceView.frame.origin = pieceView.setOrigin(square: pieceView.square)
         }
+    }
+    
+    func addPieces() {
+        let order: [[PieceType]] = [
+            [.rook,.knight,.bishop,.queen,.king,.bishop,.knight,.rook],
+            [.pawn,.pawn,.pawn,.pawn,.pawn,.pawn,.pawn,.pawn]
+        ]
+        
+        for (i,row) in order.enumerated() {
+            for (j,col) in row.enumerated() {
+                pieces.append(PieceView(type: col, color: .white, square: NSPoint(x: j, y: i)))
+                pieces.append(PieceView(type: col, color: .black, square: NSPoint(x: j, y: 7-i)))
+            }
+        }
+        subviews.append(contentsOf: pieces)
+    }
+    
+    override func viewDidMoveToWindow() {
+        addPieces()
     }
     
     var pieces: [PieceView] = []

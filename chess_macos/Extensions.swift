@@ -30,6 +30,15 @@ extension NSView {
 
 
 extension CGAffineTransform {
+    
+    init(multiply by: CGFloat) {
+        self.init(scaleX: by, y: by)
+    }
+    
+    static var shrink8: CGAffineTransform {
+        .init(multiply: 1/8)
+    }
+    
     init(centering piece: PieceView) {
         self.init(translationX: -piece.frame.width/2, y: -piece.frame.height/2)
     }
