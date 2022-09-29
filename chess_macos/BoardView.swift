@@ -45,7 +45,7 @@ class BoardView: NSView {
     }
     
     func addPieces() {
-        let order: [[PieceType]] = [
+        let order: [[PieceView.PieceType]] = [
             [.rook,.knight,.bishop,.queen,.king,.bishop,.knight,.rook],
             [.pawn,.pawn,.pawn,.pawn,.pawn,.pawn,.pawn,.pawn]
         ]

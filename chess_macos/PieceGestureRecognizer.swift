@@ -22,7 +22,7 @@ class PieceGestureRecognizer: NSGestureRecognizer {
     // Mouse events handling
     
     override func mouseDown(with event: NSEvent) {
-        board.bringSubviewToFront(view!)
+        board.bringSubviewToFront(piece)
         piece.frame.origin = location(in: board).applying(.init(centering: view as! PieceView))
     }
     
@@ -31,8 +31,14 @@ class PieceGestureRecognizer: NSGestureRecognizer {
     }
     
     override func mouseUp(with event: NSEvent) {
+        
+        guard piece.moveIsLegal(start: piece.square, end: piece.getSquare()) else {
+            piece.frame.origin = piece.square.applying(.init(multiply: piece.frame.width))
+            return
+        }
+        
         piece.frame.origin = piece.getSquare().applying(.init(multiply: piece.frame.width))
         piece.square = piece.getSquare()
     }
-    
+
 }
